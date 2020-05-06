@@ -36,9 +36,9 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.use("/api/hello", (req, res) => {
+app.get("/api/hello", (req, res) => {
   res.json({ msg: "hello world!" });
 });
-app.use("/api/v1/genius/getSongLyrics", getSongLyrics);
+app.get("/api/v1/genius/getSongLyrics", getSongLyrics);
 
 module.exports = app;
