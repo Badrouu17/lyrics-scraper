@@ -10,7 +10,9 @@ load_page = function (url) {
 };
 
 function get_browser() {
-  return puppeteer.launch({ args: ["--no-sandbox"] });
+  return puppeteer.launch({
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
 }
 
 function instantiate_page(browser) {
