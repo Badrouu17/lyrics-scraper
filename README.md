@@ -1,4 +1,4 @@
-Built using : Node.js, Express.js, Puppeteer.js, Cheerio.js
+Built using : Node.js, Express.js, Cheerio.js
 
 ## Available Scripts
 

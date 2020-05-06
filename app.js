@@ -1,7 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
-const { getSongLyrics } = require("./scrapper");
+const { getLyrics } = require("./getLyrics");
 
 // Start express app
 const app = express();
@@ -36,9 +36,9 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.get("/api/hello", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ msg: "hello world!" });
 });
-app.get("/api/v1/genius/getSongLyrics", getSongLyrics);
+app.get("/getSongLyrics", getLyrics);
 
 module.exports = app;
