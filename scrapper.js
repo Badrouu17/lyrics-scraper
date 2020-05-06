@@ -10,7 +10,7 @@ load_page = function (url) {
 };
 
 function get_browser() {
-  return puppeteer.launch();
+  return puppeteer.launch({ args: ["--no-sandbox"] });
 }
 
 function instantiate_page(browser) {
