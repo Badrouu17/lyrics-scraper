@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const { getLyrics } = require("./getLyrics");
+const { getAudio } = require("./getAudio");
 
 // Start express app
 const app = express();
@@ -40,5 +41,6 @@ app.get("/", (req, res) => {
   res.json({ msg: "hello world!" });
 });
 app.get("/getSongLyrics", getLyrics);
+app.get("/getAudio/:Vid", getAudio);
 
 module.exports = app;
