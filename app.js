@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 app.get("/", (req, res) => {
   res.json({ msg: "hello world!" });
 });
-app.get("/getSongLyrics", getLyrics);
+app.post("/getSongLyrics", getLyrics);
 app.get("/getAudio/:Vid", getAudio);
 
 module.exports = app;
