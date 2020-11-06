@@ -10,7 +10,7 @@ exports.getAudio = (req, res, next) => {
 
     audioReadableStream.pipe(res);
   } catch (e) {
-    console.log(e);
+    console.log("🔥", e);
     res.end("Error");
   }
 };
